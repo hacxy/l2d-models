@@ -7,17 +7,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 拉取代码
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: 配置 SSH 密钥
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-      - name: 部署到服务器
+      - name: Deploy
         run: |
           rsync -avz --delete -e "ssh -i ~/.ssh/deploy_key" \
             models/ \
