@@ -1,6 +1,8 @@
 # Live2D Models
 
-为 [oh-my-live2d](https://github.com/oh-my-live2d/oh-my-live2d) 提供 Live2D 模型资源的 CDN 仓库。
+为 [l2d](https://github.com/hacxy/l2d) 提供 Live2D 模型资源的 CDN 仓库。
+
+> [oh-my-live2d](https://github.com/oh-my-live2d/oh-my-live2d) 已废弃，请使用 [l2d](https://github.com/hacxy/l2d) 代替。
 
 ## 使用方式
 
